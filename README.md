@@ -13,6 +13,22 @@ Este projeto é um sistema para gerenciar recintos de animais em um zoológico. 
 
 O projeto é organizado em vários pacotes, seguindo boas práticas de separação de responsabilidades.
 
+## Regras do Sistema
+
+O sistema segue algumas regras para definir a compatibilidade de animais em recintos:
+
+- **Compatibilidade de Alimentação**: Animais carnívoros só podem dividir recintos com animais da mesma espécie. Animais herbívoros não podem compartilhar recintos com carnívoros.
+
+- **Compatibilidade de Espécies**: Determinadas espécies só podem coexistir com outras se forem compatíveis, como hipopótamos e outros animais que compartilham o bioma rio.
+
+- **Espaço Disponível**: O recinto deve ter espaço suficiente para acomodar novos animais, levando em consideração o tamanho de cada animal.
+
+- **Bioma**: O bioma do recinto deve ser compatível com o bioma natural do animal.
+
+## Tecnologias Utilizadas
+
+- **JavaScript ES6**: Linguagem utilizada no desenvolvimento do projeto.
+- **Node.js**: Plataforma de execução do código JavaScript.
 
 ### Modelos
 
@@ -68,4 +84,4 @@ const resultado = zoo.analisaRecintos('leao', 2);
 
 console.log(resultado);
 
-
+```
