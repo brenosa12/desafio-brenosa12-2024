@@ -5,7 +5,7 @@ const recintoRepository = new RecintosRepository();
 class RecintoService {
 
     eCompativel(recinto, animal, quantidade) {
-        return this.temDietaCompativel(recinto, animal) &&
+        return this.alimentacaoCompativel(recinto, animal) &&
             this.temEspeciesCompativeis(recinto, animal, quantidade) &&
             this.temBiomaCompativel(recinto, animal);
     }
@@ -35,7 +35,7 @@ class RecintoService {
         }
     }
 
-    temDietaCompativel(recinto, animal) {
+    alimentacaoCompativel(recinto, animal) {
         if (animal.alimentacao === 'carnivoro' && recinto.animaisExistentes.some(animalExistente => animalExistente.especie !== animal.especie)) {
             return false;
         } else if (animal.alimentacao !== 'carnivoro' && recinto && recinto.animaisExistentes && recinto.animaisExistentes.some(animalExistente => animalExistente.alimentacao === 'carnivoro')) {
